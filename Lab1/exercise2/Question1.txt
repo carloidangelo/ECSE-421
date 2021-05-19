@@ -1,0 +1,5 @@
+Question: What is the smallest value of change in voltage that these analog inputs can report?
+
+Answer: (5V - 0V) / (2^10) = 0.0049V
+
+Since there are 10-bits of precision, there are 2^10 possible digital values. So, to get the answer, you divide the range of voltages by 2^10.

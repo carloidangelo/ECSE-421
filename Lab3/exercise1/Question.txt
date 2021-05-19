@@ -1,0 +1,1 @@
+Since the delay() function requires interrupts to work, it will not work if called inside an ISR. Similarly, since the millis() function relies on interrupts to count, it will never increment inside an ISR, so its return value will not be accurate.

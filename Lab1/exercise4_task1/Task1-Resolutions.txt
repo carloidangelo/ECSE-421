@@ -1,0 +1,72 @@
+Task 1: Determining the resolution for each full-scale setting of the accelerometer through empirical measurements
+
+Full-scale Setting = ±2g:
+Low-power Mode
+Precision (empirically measured) = 0.016000g
+Num of Possible Values in Range = (2*⌊2g/0.016000g⌋) + 1 = 251
+Resolution = ⌈log2(251)⌉ = 8 bits
+
+Normal Mode
+Precision (empirically measured) = 0.004000g
+Num of Possible Values in Range = (2*⌊2g/0.004000g⌋) + 1 = 1001
+Resolution = ⌈log2(1001)⌉ = 10 bits
+
+High-resolution Mode
+Precision (empirically measured) = 0.001000g
+Num of Possible Values in Range = (2*⌊2g/0.001000g⌋) + 1 = 4001
+Resolution = ⌈log2(4001)⌉ = 12 bits
+
+Full-scale Setting = ±4g:
+Low-power Mode
+Precision (empirically measured) = 0.035155g
+Num of Possible Values in Range = (2*⌊4g/0.035155g⌋) + 1 = 227
+Resolution = ⌈log2(227)⌉ = 8 bits
+
+Normal Mode
+Precision (empirically measured) = 0.008789g
+Num of Possible Values in Range = (2*⌊4g/0.008789g⌋) + 1 = 911
+Resolution = ⌈log2(911)⌉ = 10 bits
+
+High-resolution Mode
+Precision (empirically measured) = 0.002197g
+Num of Possible Values in Range = (2*⌊4g/0.002197g⌋) + 1 = 3641
+Resolution = ⌈log2(3641)⌉ = 12 bits
+
+Full-scale Setting = ±8g:
+Low-power Mode
+Precision (empirically measured) = 0.064516g
+Num of Possible Values in Range = (2*⌊8g/0.064516g⌋) + 1 = 249
+Resolution = ⌈log2(249)⌉ = 8 bits
+
+Normal Mode
+Precision (empirically measured) = 0.016129g
+Num of Possible Values in Range = (2*⌊8g/0.016129g⌋) + 1 = 993
+Resolution = ⌈log2(993)⌉ = 10 bits
+
+High-resolution Mode
+Precision (empirically measured) = 0.004032g
+Num of Possible Values in Range = (2*⌊8g/0.004032g⌋) + 1 = 3969
+Resolution = ⌈log2(3969)⌉ = 12 bits
+
+Full-scale Setting = ±16g:
+Low-power Mode
+Precision (empirically measured) = 0.200000g
+Num of Possible Values in Range = (2*⌊16g/0.200000g⌋) + 1 = 161
+Resolution = ⌈log2(161)⌉ = 8 bits
+
+Normal Mode
+Precision (empirically measured) = 0.050000g
+Num of Possible Values in Range = (2*⌊16g/0.050000g⌋) + 1 = 641
+Resolution = ⌈log2(641)⌉ = 10 bits
+
+High-resolution Mode
+Precision (empirically measured) 0.012500g
+Num of Possible Values in Range = (2*⌊16g/0.012500g⌋) + 1 = 2561
+Resolution = ⌈log2(2561)⌉ = 12 bits
+
+Results:
+Although some calculations seem a bit off, especially for the ±16g full-scale setting, all the resolutions obtained above do indeed match the specifications for the accelerometer found in the datasheet. 
+
+Sources of error:
+The value range of floats is [1.2E-38, 3.4E+38]. I rounded off my empirically measured values at 6 decimal places, so some calculations may not be accurate. 
+The datasheet (page 11) states that "Typical specifications are not guaranteed" which means that the ±2.0, ±4.0, ±8.0, and ±16.0 measurement ranges are not guaranteed either, so some calculations above may not be accurate. For instance, during the lab, I got a measurement range of ±2.032 instead of ±2.0 for low-power mode.

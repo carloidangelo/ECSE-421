@@ -1,0 +1,5 @@
+Let prescaler = 256
+timer counter speed = 16000000Hz / 256 = 62500Hz
+compare match register = (62500Hz * 500ms) - 1 = 31249
+
+Since 31249 < 65536, this value will work with Timer1.

@@ -1,0 +1,3 @@
+Is this system best modelled as a Mealy machine or Moore machine? Explain your choice.
+
+This system is best modeled as a Mealy machine because, in the context of this alarm clock implementation, it is more intuitive to produce outputs when a transition is taken. For instance, when the system is in its normal state and the alarm time is reached, it not only needs to transition into its alarm state, but also produce outputs at the same time to indicate that this transition has taken place. In this implementation, it has to specifically make the buzzer ring and make the OLED screen blink when the alarm time is reached, which is equivalent to saying that it needs to produce an output at the same time as it transitions from its normal state to its alarm state. 

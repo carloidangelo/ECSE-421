@@ -1,0 +1,1 @@
+According to the Arduino website, the return value of the millis() timer function will overflow (go back to zero), after approximately 50 days. Therefore, a digital clock implemented using millis() is not reliable if it runs uninterrupted for a year becasue the return values after 50 days will not be correct.

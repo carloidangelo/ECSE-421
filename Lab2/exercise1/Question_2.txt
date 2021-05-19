@@ -1,0 +1,10 @@
+Provide the LTL formula that describes the following property of the system:
+When a button is pressed in the alarm state the alarm will be silenced for a set amount of time or until the user turns off the alarm.
+
+Let p denote the condition that a button is pressed, q denote the condition that the alarm is silenced for a set amount of time, and r denote the condition that the user turns off the alarm.
+Let a be the alarm state
+
+G( ((p ∧ a) => q) ∧ (a => Xa)Ur )
+	
+	
+	

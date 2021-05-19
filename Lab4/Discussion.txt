@@ -1,0 +1,1 @@
+Mutexes are important because they prevent race conditions from happening and, therefore, reduce the amount of errors in a program. A mutex would be necessary in programs that have multiple threads and a shared resource like a queue. 

@@ -1,0 +1,6 @@
+I got the displacement by using the two following formulas:
+
+	Δx=vi*Δt+(1/2)*a*(Δt^2) -----> used this formula for the displacement itself
+	a = (v2 - v1) / Δt	-----> used this formula to find vi in the formula above
+
+**Can find more details in the excel worksheet
